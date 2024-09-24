@@ -1,0 +1,51 @@
+# declare local variables
+monthlySales = 0 # monthly sales amount
+storeBonus = 0 # store bonus amount
+employeeBonus = 0 # employee bonus amount
+saleIncrease = 0 # percent of sales increase
+prompt = "How much was made in sales last month:" # prompt will be a string literal
+secondaryprompt = "By how much did sales increase last month:"
+
+# This code gets the monthly sales
+monthlySales = float(input(prompt))
+
+# This code determines the storeAmount bonus
+if monthlySales >= 110000:
+    storeBonus = 6000
+elif monthlySales >= 100000:
+    storeBonus = 5000
+elif monthlySales >= 90000:
+    storeBonus = 4000
+elif monthlySales >= 80000:
+    storeBonus = 3000
+else:
+    storeBonus = 0
+    
+    
+# This code gets the percent of increase in sales
+    
+    
+saleIncrease = float(input(secondaryprompt))
+saleIncrease = saleIncrease / 100
+
+
+# This code determines the empAmount bonus
+
+
+if saleIncrease >= .05:
+    empAmount = 75
+elif saleIncrease >= .04:
+    empAmount = 50
+elif saleIncrease >= .03:
+    empAmount = 40
+else:
+    empAmount = 0
+    
+    
+# This code prints the bonus information
+    
+    
+print("The store bonus amount is $", storeBonus)
+print("The employee bonus amount is $", empAmount)
+if (storeBonus == 6000 ) and (empAmount == 75):
+    print('Congrats! You have reached the highest bonus amounts possible! ')
