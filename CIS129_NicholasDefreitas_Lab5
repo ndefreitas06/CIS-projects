@@ -1,0 +1,20 @@
+KeepGoing = "y"
+
+while KeepGoing == "y":
+    Num_of_days = 7
+    TotalBottles = 0
+    TodayBottles = 0
+    Counter = 0
+
+    while Counter < Num_of_days:
+        TodayBottles = input("Enter the number of bottles returned for day" + str(Counter+1) + ":")
+        TotalBottles += int(TodayBottles)
+        counter += 1
+
+    TotalPayout = 0
+    Payout_per_bottle = .10
+    TotalPayout = float(Payout_per_bottle + TotalBottles) 
+    print ("The total number of bottles collected is " + str(TotalBottles))
+    print ("The total paid out is $" + format(TotalPayout, '.2f'))
+    print ("Do you want to enter another week's worth of data?")
+    KeepGoing = input("(Enter y or n): ")
