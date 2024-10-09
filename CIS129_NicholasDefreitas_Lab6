@@ -1,45 +1,45 @@
 import math
 
-ReqDogs = 0
-BunPack = 8
-DogPack = 10
-DogLeft = 0
-BunLeft = 0
-MinDog = 0
-MinBun = 0
-ReqDogs = input()
-
-DogLeft = ((DogPack-int(ReqDogs)%DogPack)%DogPack)
-MinDog = math.ceil(int(ReqDogs)/DogPack)
-
-BunLeft = ((BunPack-int(ReqDogs)%BunPack)%BunPack)
-MinBun = math.ceil(int(ReqDogs)/BunPack)
-
-print("Remaining hot dogs:" + str(DogLeft))
-print("Hotdog packs required:" +str(MinDog))
-print("Remaining buns:" + str(BunLeft))
-print("Bun packs required:" + str(MinBun)) 
-
 GuestAttend = 0
 OneGuestFood = 0
 ReqDogs = 0
+
 BunPack = 8
 DogPack = 10
+
 DogLeft = 0
 BunLeft = 0
+
 MinDog = 0
 MinBun = 0
 
-GuestAttend = input("Enter the number of people attending the cookout: ")
-OneGuestFood = input("Enter the number of hot dogs for each person: ")
-ReqDogs = (int(GuestAttend)) * (int(OneGuestFood))
-DogLeft = ((DogPack-int(ReqDogs)%DogPack)%DogPack)
-MinDog = math.ceil(int(ReqDogs)/DogPack)
+def inputs():
+    
+    global GuestAttend
+    GuestAttend = input("Enter the number of people attending the cookout: ")
+    global OneGuestFood
+    OneGuestFood = input("Enter the number of hot dogs for each person: ")
+    
+def Math():
+    
+    global ReqDogs
+    ReqDogs = (int(GuestAttend)*int(OneGuestFood))
+    global DogLeft
+    DogLeft = ((DogPack-int(ReqDogs)%DogPack)%DogPack)
+    global MinDog
+    MinDog = math.ceil(int(ReqDogs)/DogPack)
+    global BunLeft
+    BunLeft = ((BunPack-int(ReqDogs)%BunPack)%BunPack)
+    global MinBun
+    MinBun = math.ceil(int(ReqDogs)/BunPack)
+    
+def output():
+    
+    print("Remaining hot dogs: " + str(DogLeft) + ",", "minimum packs of hot dogs: " + str(MinDog) + ",", "Remaining buns: " + str(BunLeft) + ",", "minimum packs of hot dog buns: " + str(MinBun)) 
+    
+inputs()
 
-BunLeft = ((BunPack-int(ReqDogs)%BunPack)%BunPack)
-MinBun = math.ceil(int(ReqDogs)/BunPack)
+Math()
+    
+output()    
 
-print("Remaining hot dogs:" + str(DogLeft))
-print("Hotdog packs required:" +str(MinDog))
-print("Remaining buns:" + str(BunLeft))
-print("Bun packs required:" + str(MinBun)) 
